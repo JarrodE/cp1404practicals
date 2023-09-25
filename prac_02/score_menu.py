@@ -6,14 +6,14 @@ MENU = """(G)et score (must be 0-100)
 
 
 def main():
-    score = float(input("Score: "))
-    score = parameters(score)
+    score = int(input("Score: "))
+    parameters(score)
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "G":
-            score = float(input("Score: "))
-            score = parameters(score)
+            score = int(input("Score: "))
+            parameters(score)
         elif choice == "P":
             score_ranks(score)
         elif choice == "S":
@@ -42,7 +42,7 @@ def score_ranks(score):
 
 
 def print_stars(score):
-    print("*" * score)
+    print(f"{'*' * score}")
 
 
 main()
