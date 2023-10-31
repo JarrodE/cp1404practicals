@@ -1,8 +1,8 @@
 """CP1404 Practical - Guitar
 Estimated: 30 minutes
-Actual:  minutes
+Actual: 27 minutes
 Current time: 17:20
-Finish time:
+Finish time: 17:47
 """
 
 
