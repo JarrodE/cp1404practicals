@@ -1,7 +1,8 @@
 """CP1404 Practical - Languages
 Estimated: 30 minutes
+Actual: 21 minutes
 Current time: 16:54
-Finish time:
+Finish time: 17:15
 """
 
 from programming_language import ProgrammingLanguage
