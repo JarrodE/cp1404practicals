@@ -17,10 +17,10 @@ def main():
     print("Guitars:")
     for guitar in guitars:
         print(guitar)
-    guitars.sort()
-    print("\nGuitars sorted by year:")
-    for guitar in guitars:
-        print(guitar)
+    new_guitars = get_user_guitars()
+    guitars.extend(new_guitars)
+    save_guitars(guitars, FILENAME)
+    print(f"\nGuitars saved to {FILENAME}")
 
 
 def load_guitars(filename):
@@ -33,6 +33,28 @@ def load_guitars(filename):
             guitar = Guitar(name, year, cost)
             guitars.append(guitar)
     return guitars
+
+
+def get_user_guitars():
+    """Prompt user for details of new guitars and return a list of Guitar objects."""
+    guitars = []
+    print("\nAdd new Guitar:")
+    name = input("Name: ")
+    while name != "":
+        year = int(input("Year: "))
+        cost = float(input("Cost: $"))
+        new_guitar = Guitar(name, year, cost)
+        guitars.append(new_guitar)
+        print(f"{new_guitar} added.")
+        name = input("Name: ")
+    return guitars
+
+
+def save_guitars(guitars, filename):
+    """Save list of guitars to file."""
+    with open(filename, "w") as file:
+        for guitar in guitars:
+            file.write(f"{guitar.name},{guitar.year},{guitar.cost:.2f}\n")
 
 
 if __name__ == "__main__":
