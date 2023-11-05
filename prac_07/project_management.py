@@ -8,6 +8,7 @@ from datetime import datetime
 from project import Project
 
 FILENAME = "projects.txt"
+
 MENU = """- (L)oad projects
 - (S)ave projects
 - (D)isplay projects
