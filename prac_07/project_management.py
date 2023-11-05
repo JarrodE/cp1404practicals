@@ -1,8 +1,8 @@
 """CP1404 Practical - Project Management
 Estimated: 60 minutes
-Actual:  minutes
+Actual:  70 minutes (rushed)
 Current time: 1650
-Finish time:
+Finish time: 1800
 """
 from datetime import datetime
 from project import Project
