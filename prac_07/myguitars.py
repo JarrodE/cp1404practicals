@@ -2,7 +2,7 @@
 My guitars program
 Estimate: 30
 Start: 1610
-Finish:
+Finish: 1650
 """
 
 import csv
