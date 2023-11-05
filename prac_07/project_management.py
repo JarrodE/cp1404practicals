@@ -18,6 +18,7 @@ MENU = """- (L)oad projects
 
 
 def main():
+    """Main function to run the project management program."""
     projects = load_projects(FILENAME)
     is_running = True
     while is_running:
@@ -41,6 +42,7 @@ def main():
 
 
 def load_projects(filename):
+    """Load the projects from a given filename and return them as a list of Project objects."""
     projects = []
     with open(filename, 'r') as file:
         lines = file.readlines()[1:]  # Skip header line
@@ -56,6 +58,7 @@ def load_projects(filename):
 
 
 def save_projects(filename, projects):
+    """Saves projects to a given file."""
     with open(filename, 'w') as file:
         file.write("Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage\n")
         for project in projects:
@@ -64,6 +67,7 @@ def save_projects(filename, projects):
 
 
 def display_projects(projects):
+    """Display the projects, separating incomplete and complete projects."""
     print("Incomplete projects: ")
     for project in projects:
         if project.completion_percentage < 100:
@@ -75,6 +79,7 @@ def display_projects(projects):
 
 
 def filter_projects(projects):
+    """Filter and display projects that start after a given date."""
     date_str = input("Show projects that start after date (dd/mm/yy): ")
     after_date = datetime.datetime.strptime(date_str, "%d/%m/%Y").date()
     for project in projects:
@@ -83,6 +88,7 @@ def filter_projects(projects):
 
 
 def add_project(projects):
+    """Add a new project."""
     print("Let's add a new project")
     name = input("Name: ")
     start_date = datetime.datetime.strptime(input("Start date (dd/mm/yy): "), "%d/%m/%Y").date()
@@ -93,6 +99,7 @@ def add_project(projects):
 
 
 def update_project(projects):
+    """Update a project."""
     for index, project in enumerate(projects):
         print(f"{index} {project}")
     project_choice = int(input("Project choice: "))
