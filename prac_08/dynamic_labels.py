@@ -1,3 +1,9 @@
+"""
+CP1404 - GUI program for dynamic labels
+Jarrod Eaton
+12/11/2023
+"""
+
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.label import Label
