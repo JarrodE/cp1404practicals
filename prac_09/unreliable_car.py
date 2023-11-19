@@ -5,7 +5,7 @@ import random
 class UnreliableCar(Car):
     """A car that has a chance of not working."""
 
-    def __int__(self, name, fuel, reliability):
+    def __init__(self, name, fuel, reliability):
         """Initialise an UnreliableCar instance."""
         super().__init__(name, fuel)
         self.reliability = reliability
