@@ -79,4 +79,5 @@ def format_as_sentence(phrase):
     >>> format_as_sentence('this is a test')
     'This is a test.'
     """
-    pass
+    return phrase[0].upper() + phrase[1:] + ('' if phrase.endswith('.') else '.')
+
