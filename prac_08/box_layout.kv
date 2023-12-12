@@ -1,0 +1,16 @@
+BoxLayout:
+    orientation: 'vertical'
+#    orientation: 'horizontal'
+    Button:
+        text: 'Clear' # Task 3
+        on_press: app.handle_clear() # Task 10
+    TextInput: # Task 8
+        id: input_name
+        text: ""
+    Button:
+        text: 'Greet' # Task 3
+        on_press: app.handle_greet() # Task 4
+    Label:
+        id: output_label # Task 6
+        text: "" # Task 1
+        color: (1, 1, 0, 1) # Task 2
